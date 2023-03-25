@@ -1,0 +1,26 @@
+.Carousal {
+  position: relative;
+  /* max-height: 120px;
+    min-width: 300px; */
+}
+.carousal-img img {
+  position: relative;
+  height: 400px;
+  width: 1200px;
+  object-fit: cover;
+}
+
+.next-icon{
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    cursor: pointer;
+    opacity: 0.2;
+}
+.prev-icon{
+    position: absolute;
+    left: 1rem;
+    top: 8rem;
+    cursor: pointer;
+    opacity: 0.2;
+}

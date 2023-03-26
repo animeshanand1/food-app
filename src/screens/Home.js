@@ -15,8 +15,8 @@ function Home() {
       },
     });
     response = await response.json();
-    setFoodCategory(response[0]);
-    setFoodItem(response[1]);
+    setFoodCategory(response[1]);
+    setFoodItem(response[0]);
     console.log(response[0], response[1]);
   };
   useEffect(() => {
@@ -36,11 +36,11 @@ function Home() {
 
         <div className="container">
           {foodCategory !== []
-            ? foodCategory.map((Data) => {
-                return <div>Hi</div>;
+            ? foodItem.map((Data) => {
+                return <div><Card/></div>;
               })
             : ""}
-          <Card />
+          {/* <Card /> */}
         </div>
       </div>
     </>

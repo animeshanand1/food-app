@@ -3,13 +3,20 @@
   /* max-height: 120px;
     min-width: 300px; */
 }
-.carousal-img img {
+/* .carousel-img img {
   position: relative;
-  height: 400px;
+  height: 200px;
   width: 1200px;
   object-fit: cover;
+} */
+.carousel-img{
+  height: 400px;
+  object-fit: cover;
 }
-
+.carousel .thumb{
+  max-height: 12px;
+  max-width: 6px;
+}
 .next-icon{
     position: absolute;
     right: 1rem;

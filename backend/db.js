@@ -7,7 +7,7 @@ const mongoDB = async () => {
     if (err) console.log("error", err);
     else {
       console.log("connected ready for use");
-      const fetched_data = await mongoose.connection.db.collection("sample");
+      const fetched_data = await mongoose.connection.db.collection("food_items");
       fetched_data.find({}).toArray(async function (err, data) {
         const food_category = await mongoose.connection.db.collection(
           "food_category"

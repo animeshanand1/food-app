@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate,useNavigate } from "react-router-dom";
 
 function Signup() {
+  let navigate=useNavigate()
   const [credentials, setCredentials] = useState({
     name: "",
     password: "",
@@ -85,9 +86,11 @@ function Signup() {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" >
             Submit
-          </button>
+            
+          </button >
+          
           <Link to="/login" className="m-3 btn btn-danger">
             Already a user
           </Link>

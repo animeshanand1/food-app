@@ -8,12 +8,19 @@ const mongoDB = async () => {
     else {
       console.log("connected ready for use");
       const fetched_data = await mongoose.connection.db.collection("sample");
-      fetched_data.find({}).toArray(function (err, data) {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log(data);
-        }
+      fetched_data.find({}).toArray(async function (err, data) {
+        const food_category = await mongoose.connection.db.collection(
+          "food_category"
+        );
+        food_category.find({}).toArray(async function (err, catData) {
+          if (err) {
+            console.log(err);
+          } else {
+            global.food_category = catData;
+            global.food_items = data;
+            console.log(global.food_category);
+          }
+        });
       });
     }
   });

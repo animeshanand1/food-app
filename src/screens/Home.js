@@ -16,8 +16,9 @@ function Home() {
     });
     response = await response.json();
     setFoodCategory(response[1]);
+    // console.log(response[1]);
     setFoodItem(response[0]);
-    console.log(response[0], response[1]);
+    // console.log(response[0]);
   };
   useEffect(() => {
     loadData();
@@ -37,10 +38,25 @@ function Home() {
         <div className="container">
           {foodCategory !== []
             ? foodItem.map((Data) => {
-                return <div><Card/></div>;
+                return (
+                  <div className="row mb-3">
+                    <div key={Data.id} className="fs-3 m-3">
+                      {Data.CategoryName}
+                    </div>
+                    <hr />
+                    {foodItem!==[]?
+                    foodItem.filter((item)=>Data.CategoryName).map(filterItems=>{
+                      return(
+                        <div>
+                          <Card/>
+                        </div>
+                      )
+                    }):<h3>No such items</h3>}
+                  </div>
+                );
               })
             : ""}
-          {/* <Card /> */}
+          
         </div>
       </div>
     </>

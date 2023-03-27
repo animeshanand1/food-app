@@ -6,7 +6,7 @@ function Header() {
     <div>
       <nav className="bar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Go</Link>
+          <Link className="navbar-brand" to="/">GoFood</Link>
           
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">

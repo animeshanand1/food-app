@@ -55,7 +55,7 @@ router.post(
           .status(400)
           .json({ errors: "Try logging using valid email ID" });
       }
-      const comparePSWD=await bcrypt.compare(req.body.password,userData.password)
+      const comparePSWD=await bcrypt.compareSync(req.body.password,userData.password)
       if ( req.body.password!== userData.password) {
         return res.status(400).json({ errors: "Incorrect Password" });
       }

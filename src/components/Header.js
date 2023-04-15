@@ -6,7 +6,7 @@ function Header() {
     <div>
       <nav className="bar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid" style={{display:'flex',textAlign:'end' ,position:'relative'}}>
-          <Link className="navbar-brand" style={{position:'absolute',right:'2rem',top:'0.5rem'}} to="/">GoFood</Link>
+          <Link className="navbar-brand" style={{position:'absolute',right:'2rem',top:'0.5rem'}} to="/">BurGERR</Link>
           
           <div style={{display:'flex' ,marginLeft:'4px'}} className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">

@@ -44,21 +44,27 @@ function Home() {
                       {Data.CategoryName}
                     </div>
                     <hr />
-                    {foodItem!==[]?
-                    foodItem.filter((item)=>Data.CategoryName).map(filterItems=>{
-                      return(
-                        <div className="col-12 col-md-6 col-lg-3">
-                          <Card foodName={filterItems.name}
-                          imgSrc={filterItems.img}
-                          options={filterItems.options[0]}/>
-                        </div>
-                      )
-                    }):<h3>No such items</h3>}
+                    {foodItem !== [] ? (
+                      foodItem
+                        .filter((item) => Data.CategoryName)
+                        .map((filterItems) => {
+                          return (
+                            <div className="col-12 col-md-6 col-lg-3">
+                              <Card
+                                foodName={filterItems.name}
+                                imgSrc={filterItems.img}
+                                options={filterItems.options[0]}
+                              />
+                            </div>
+                          );
+                        })
+                    ) : (
+                      <h3>No such items</h3>
+                    )}
                   </div>
                 );
               })
             : ""}
-          
         </div>
       </div>
     </>
